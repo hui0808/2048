@@ -1,0 +1,117 @@
+.cell {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-color: #d0bfb6;
+    margin-right: 12px;
+    border-radius: 3px;
+}
+
+.cell:last-child {
+    margin-right: 0px;
+}
+
+#id-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#id-main {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#id-console {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+#id-map {
+    display: inline-flex;
+    flex-direction: column;
+    height: max-content;
+    width: max-content;
+}
+
+#id-game {
+    padding: 12px;
+    border-radius: 6px;
+    background: #bbada0;
+    position: relative;
+    user-select: none;
+}
+
+#id-grid {
+    position: absolute;
+    display: inline;
+    z-index: 2;
+}
+
+.row {
+    display: inline-flex;
+    margin-bottom: 12px;
+}
+
+.row:last-child {
+    margin-bottom: 0px;
+}
+
+.grid {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    font-size: 25px;
+    font-weight: 700;
+    transition: transform 100ms ease-in-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0)
+    }
+
+    50% {
+        transform: scale(1.2)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+.grid-inner {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.grid-new .grid-inner {
+    animation: appear 200ms ease 100ms backwards;
+}
+
+.grid-merged .grid-inner {
+    animation: pop 200ms ease 100ms backwards;
+}

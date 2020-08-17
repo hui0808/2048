@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048</title>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid_color.css">
+    <link rel="stylesheet" href="css/position.css">
+    <style>
+        #id-arrows {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px orange solid;
+            border-radius: 6px;
+            width: 80px;
+            height: 80px;
+            background: #796e66;
+            color: #ede0c8;
+        }
+    </style>
+</head>
+<body>
+    <div id="id-content">
+        <h1>2048</h1>
+        <div id="id-main">
+            <div id="id-console">
+                <button id="id-reset">重新游戏</button>
+                <p id="id-result"></p>
+            </div>
+            <div id="id-game">
+                <div id="id-grid"></div>
+                <div id="id-map"></div>
+                <div id="id-arrows"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const __main = function() {
+            let game = Game.instance()
+        }
+
+        __main()
+    </script>
+</body>
+</html>

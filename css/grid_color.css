@@ -1,0 +1,54 @@
+.num2 .grid-inner{
+    color: #796e66;
+    background: #eee4da;
+}
+
+.num4 .grid-inner{
+    color: #796e66;
+    background: #ede0c8;
+}
+
+.num8 .grid-inner{
+    color: #f9f6f2;
+    background: #f2b179;
+}
+
+.num16 .grid-inner{
+    color: #f9f6f2;
+    background: #f59563;
+}
+
+.num32 .grid-inner{
+    color: #f9f6f2;
+    background: #f67c5f;
+}
+
+.num64 .grid-inner{
+    color: #f9f6f2;
+    background: #f65e3b
+}
+
+.num128 .grid-inner{
+    color: #f9f6f2;
+    background: #edcf72;
+}
+
+.num256 .grid-inner{
+    color: #f9f6f2;
+    background: #edcc61;
+}
+
+.num512 .grid-inner{
+    color: #f9f6f2;
+    background: #edc850;
+}
+
+.num1024 .grid-inner{
+    color: #f9f6f2;
+    background: #edc53f;
+}
+
+.num2048 .grid-inner{
+    color: #f9f6f2;
+    background: #3c3a32;
+}

@@ -353,20 +353,15 @@ class Scene
             let key = event.key
             if ('asdw'.includes(key)) {
                 this.clear()
-                let arr = e('#id-arrows')
                 let save = clonedSquare(this.grids)
                 if (key === 'a') {
                     this.moveLeft()
-                    arr.innerHTML = '←'
                 } else if (key === 'd') {
                     this.moveRight()
-                    arr.innerHTML = '→'
                 } else if (key === 'w') {
                     this.moveUp()
-                    arr.innerHTML = '↑'
                 } else {
                     this.moveDown()
-                    arr.innerHTML = '↓'
                 }
                 if (!arrayEquals(save, this.grids)) {
                     this.createGrid()

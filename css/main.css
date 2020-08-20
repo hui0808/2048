@@ -1,6 +1,10 @@
+body {
+    background: #faf8ef;
+}
+
 #id-title {
     font-size: 55px;
-    color: #7a6b37;
+    color: #776e65;
 }
 
 .cell {

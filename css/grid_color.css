@@ -46,9 +46,11 @@
 .num1024 .grid-inner{
     color: #f9f6f2;
     background: #edc53f;
+    font-size: 30px;
 }
 
 .num2048 .grid-inner{
     color: #f9f6f2;
     background: #3c3a32;
+    font-size: 30px;
 }

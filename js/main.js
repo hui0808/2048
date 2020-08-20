@@ -4,9 +4,7 @@ class GameObject {
     }
 
     static new(...args) {
-        let i = new this(...args)
-        // i.main = this.main
-        return i
+        return new this(...args)
     }
 
     init() {
@@ -36,7 +34,6 @@ class Game extends GameObject {
         this.fps = 30
         this.scene = null
         this.runWithScene(Scene)
-        this.listener(e('#id-reset'), 'click', event => this.replaceScene(Scene))
     }
 
     static instance(...args) {
@@ -398,19 +395,51 @@ class Scene
     }
 }
 
+
 class GameOver extends GameObject {
     constructor(game) {
         super();
         this.game = game
-        this.element = e('#id-result')
-        this.element.innerText = 'Game Over!'
+        this.element = e('#id-message')
+        this.register()
+    }
+
+    register() {
+        let html = `
+            <p>Game Over!</p>
+            <div id="id-restart">Try again!</div>
+        `
+        this.element.classList.add('message-show')
+        this.element.innerHTML = html
+        this.listener(this.element, 'click', event => {
+            let target = event.target
+            if (target.id === 'id-restart') {
+                this.game.replaceScene(Scene)
+            }
+        })
     }
 
     destory() {
         super.destory();
-        this.element.innerText = ' '
+        log('game over')
+        this.element.innerHTML = ''
+        this.element.classList.remove('message-show')
     }
 }
+
+// class GameOver extends GameObject {
+//     constructor(game) {
+//         super();
+//         this.game = game
+//         this.element = e('#id-result')
+//         this.element.innerText = 'Game Over!'
+//     }
+//
+//     destory() {
+//         super.destory();
+//         this.element.innerText = ' '
+//     }
+// }
 
 class Win extends GameObject {
     constructor(game) {

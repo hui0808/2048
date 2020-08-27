@@ -95,17 +95,8 @@ const zeros = function(x, y) {
     return r
 }
 
-const rotate90 = function(array) {
-    // 将array顺时针旋转90度
-    let n = array.length // 行高
-    let m = array[0].length // 列宽
-    let r = zeros(m, n)
-    for (let i = n - 1; i >= 0; i--) {
-        for (let j = 0; j < m; j++) {
-            let num = array[i][j]
-            r[j][n - i - 1] = num
-        }
-    }
-    return r
+const imageFromPath = function(path) {
+    let img = new Image()
+    img.src = path
+    return img
 }
-
